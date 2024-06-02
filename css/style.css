@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul,li,ol {list-style: none; margin: 0;}
+
+a {text-decoration: none; color: inherit;}
+
+img {max-width: 100%; vertical-align: middle;}
+
+body {
+    line-height: 1;
+    background: #fff;
+    color: #333;
+}
+
+.main {
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* 헤더 */
+
+.header {
+    position: relative;
+    max-width: 1200px; 
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.gnb {
+    box-sizing: border-box;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu::before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 1200px;
+    height: 140px;
+    background: #ffffff;
+    display: none;
+}
+
+.menu:hover::before {
+    display: block;
+}
+
+.menu>li {
+    position: relative;
+    padding: 30px 0;
+}
+
+.menu>li:hover {
+    color:rgb(0, 110, 255);
+}
+
+.menu>li>a {
+    padding: 30px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.sub {
+    position: absolute;
+    top: 155%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    display: none;
+}
+
+.sub>li {
+    line-height: 40px;
+    color: #333;
+}
+
+.sub>li>a:hover {
+    color:rgb(0, 110, 255);
+    font-weight:600;
+}
+
+.menu:hover .sub {
+    display: block;
+    opacity: 1;
+}
+
+
+
+/* 슬라이드 */
+
+.slide {
+    height: 300px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 9999px;
+    position: relative;
+    left: 0;
+    transition: left 0.5s;
+}
+
+/* 중간 */
+
+.content {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px;
+    background: #f2f2f2;
+}
+
+.btn-1 {
+    background: #006eff;
+    color: #fff;
+}
+
+.notice {
+    width: 400px;
+}
+
+.notice-box {
+    height: 100%;
+    padding: 15px;
+    border-radius: 0 15px 15px 15px;
+    background: #f2f2f2;
+}
+
+.notice-box p {
+    line-height: 30px;
+    border-bottom: 1px dotted #ddd;
+}
+
+.gallery {
+    width: 400px;
+}
+
+.gallery-box {
+    display: flex;
+    padding: 15px;
+    height: 100%;
+    background: #f2f2f2;
+}
+
+
+.banner img {
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* 푸터 */
+
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #006eff;
+}
+
+.copyright {
+    color: #fff;
+}
+
+/* 모달 */
